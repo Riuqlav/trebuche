@@ -17,7 +17,8 @@ const Left = styledComponents.div`
 `;
 
 const Language = styledComponents.span`
-  font
+  font-size: 14px;
+  cursor: pointer;
 `;
 
 const Center = styledComponents.div`
@@ -35,6 +36,7 @@ const Navbar = () => {
       <Wrapper>
         <Left>
           <Language>EN</Language>
+          <SearchContainer>imput icon</SearchContainer>
         </Left>
         <Center>center</Center>
         <Right>right</Right>
