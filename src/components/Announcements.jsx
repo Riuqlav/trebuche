@@ -1,20 +1,12 @@
 import React from "react";
-import styledComponents from "styled-components";
+import classes from "./Announcements.module.css";
 
-const Container = styledComponents.div`
-height: 30px;
-background-color: teal;
-color: white;
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 14px;
-font-weight: bolder;
-
-`;
-
-const Announcements = () => {
-  return <Container>Super Deal! Free shipping over 50 € purchase!</Container>;
+const Announcements = (props) => {
+  return (
+    <div className={classes.div}>
+      Super Deal! Free shipping over 50 € purchase!
+    </div>
+  );
 };
 
 export default Announcements;
