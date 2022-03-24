@@ -7,15 +7,16 @@ import classes from "./Slider.module.css";
 const Arrow = styledComponents.div`
   left: ${(props) => props.direction === "left" && "10px"};
   right: ${(props) => props.direction === "right" && "10px"};
+  alig
 `;
 
 const Slider = (props) => {
   return (
     <div className={classes.Container}>
-      <div className={classes.Arrow}>
+      <div className={classes.ArrowL}>
         <ArrowLeftOutlined direction="left" />
       </div>
-      <div className={classes.Arrow}>
+      <div className={classes.ArrowR}>
         <ArrowRightOutlined direction="right" />
       </div>
     </div>
