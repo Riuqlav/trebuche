@@ -31,6 +31,7 @@ const Arrow = styled.div`
 
 const Wrapper = styled.div`
   height: 100%;
+  display: flex;
 `;
 
 const Slide = styled.div`
@@ -66,7 +67,12 @@ const Desc = styled.p`
   font-weight: 500;
   letter-spacing: 3px;
 `;
-const Button = styled.button``;
+const Button = styled.button`
+  padding: 10px;
+  font-size: 20px;
+  background: transparent;
+  cursor: pointer;
+`;
 
 const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(0);
@@ -90,6 +96,26 @@ const Slider = () => {
           </ImgContainer>
           <InfoContainer>
             <Title>SUMMER SALE!</Title>
+            <Desc>DON'T KILL YOURSELF YET, SUMMER DRESS SEASON IS HERE</Desc>
+            <Button>SHOW ME MORE</Button>
+          </InfoContainer>
+        </Slide>
+        <Slide>
+          <ImgContainer>
+            <Image src="https://i.ibb.co/DG69bQ4/2.png" />
+          </ImgContainer>
+          <InfoContainer>
+            <Title>WINTER SALE!</Title>
+            <Desc>DON'T KILL YOURSELF YET, SUMMER DRESS SEASON IS HERE</Desc>
+            <Button>SHOW ME MORE</Button>
+          </InfoContainer>
+        </Slide>
+        <Slide>
+          <ImgContainer>
+            <Image src="https://i.ibb.co/cXFnLLV/3.png" />
+          </ImgContainer>
+          <InfoContainer>
+            <Title>POPULAR PRODUCTS</Title>
             <Desc>DON'T KILL YOURSELF YET, SUMMER DRESS SEASON IS HERE</Desc>
             <Button>SHOW ME MORE</Button>
           </InfoContainer>
