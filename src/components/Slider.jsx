@@ -1,6 +1,7 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
 import { useState } from "react";
 import styled from "styled-components";
+import { sliderItems } from "../data";
 
 const Container = styled.div`
   width: 100%;
@@ -32,7 +33,7 @@ const Arrow = styled.div`
 const Wrapper = styled.div`
   height: 100%;
   display: flex;
-  transform: translateX(0vw);
+  transform: translateX(${(props) => props.slideIndex * -100}vw);
 `;
 
 const Slide = styled.div`
@@ -85,45 +86,25 @@ const Slider = () => {
       setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
     }
   };
-  const [slideIndex, setSlideIndex] = useState;
-  const handleClick = (direction) => {};
 
   return (
     <Container>
       <Arrow direction="left" onClick={() => handleClick("left")}>
         <ArrowLeftOutlined />
       </Arrow>
-      <Wrapper>
-        <Slide bg="f5fafd">
-          <ImgContainer>
-            <Image src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f0b2e7d3-f9e7-455a-8f77-a7a9ae25dedc/d9wlxq3-634f227c-49fa-4fbf-80e0-16ba4f633937.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2YwYjJlN2QzLWY5ZTctNDU1YS04Zjc3LWE3YTlhZTI1ZGVkY1wvZDl3bHhxMy02MzRmMjI3Yy00OWZhLTRmYmYtODBlMC0xNmJhNGY2MzM5MzcucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.r35G1doVRUVyd33kFGAa6pAPQou6VkjGjIYaLde0HqQ" />
-          </ImgContainer>
-          <InfoContainer>
-            <Title>SUMMER SALE!</Title>
-            <Desc>DON'T KILL YOURSELF YET, SUMMER DRESS SEASON IS HERE</Desc>
-            <Button>SHOW ME MORE</Button>
-          </InfoContainer>
-        </Slide>
-        <Slide bg="fcf1ed">
-          <ImgContainer>
-            <Image src="https://i.ibb.co/DG69bQ4/2.png" />
-          </ImgContainer>
-          <InfoContainer>
-            <Title>WINTER SALE!</Title>
-            <Desc>DON'T KILL YOURSELF YET, SUMMER DRESS SEASON IS HERE</Desc>
-            <Button>SHOW ME MORE</Button>
-          </InfoContainer>
-        </Slide>
-        <Slide bg="fbf0f4">
-          <ImgContainer>
-            <Image src="https://i.ibb.co/cXFnLLV/3.png" />
-          </ImgContainer>
-          <InfoContainer>
-            <Title>POPULAR PRODUCTS</Title>
-            <Desc>DON'T KILL YOURSELF YET, SUMMER DRESS SEASON IS HERE</Desc>
-            <Button>SHOW ME MORE</Button>
-          </InfoContainer>
-        </Slide>
+      <Wrapper slideIndex={slideIndex}>
+        {sliderItems.map((item) => (
+          <Slide bg={item.bg}>
+            <ImgContainer>
+              <Image src={item.img} />
+            </ImgContainer>
+            <InfoContainer>
+              <Title> {item.title} </Title>
+              <Desc> {item.desc} </Desc>
+              <Button>SHOW ME MORE</Button>
+            </InfoContainer>
+          </Slide>
+        ))}
       </Wrapper>
       <Arrow direction="right" onClick={() => handleClick("right")}>
         <ArrowRightOutlined />
