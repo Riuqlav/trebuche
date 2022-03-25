@@ -1,7 +1,6 @@
 import React from "react";
 import { categories } from "../data";
 import styled from "styled-components";
-import { Button } from "@material-ui/core";
 
 const Container = styled.div``;
 const Image = styled.img``;
