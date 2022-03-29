@@ -74,8 +74,4 @@ export const popularProducts = [
     id: 9,
     img: "	https://d3o2e4jr3mxnm3.cloudfront.net/Detailed-Wildflowers-Chill-Cap_77492_1_lg.png",
   },
-  {
-    id: 10,
-    img: "https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
-  },
 ];

@@ -47,7 +47,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* To make it change the backgrond on hover */
+  /* To make it change the background on hover */
   position: relative;
   &:hover ${Info} {
     opacity: 1;
