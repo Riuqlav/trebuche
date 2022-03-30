@@ -15,7 +15,7 @@ const Navbar = (props) => {
           </div>
         </div>
         <div className={classes.Center}>
-          <h1 className={classes.Logo}>Boutique Ennuyeuse.</h1>
+          <h1 className={classes.Logo}>Trébuché.</h1>
         </div>
         <div className={classes.Right}>
           <div className={classes.MenuItem}>REGISTER</div>
