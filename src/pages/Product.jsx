@@ -75,61 +75,10 @@ const FilterSize = styled.select`
 `;
 
 const FilterSizeOption = styled.option``;
-// const Wrapper = styled.div`
-//   padding: 50px;
-//   display: flex;
-// `;
-
-// const ImgContainer = styled.div`
-//   flex: 0.3; //almost left but not all the way
-// `;
-
-// const Image = styled.img`
-//   width: 50%;
-//   height: 90vh;
-//   object-fit: cover;
-// `;
-
-// const InfoContainer = styled.div`
-//   flex: 1;
-//   padding: 0px 50px;
-// `;
-
-// const Title = styled.h1`
-//   font-weight: 200;
-// `;
-
-// const Desc = styled.p`
-//   margin: 20px 0px;
-// `;
-
-// const Price = styled.span`
-//   font-weight: 300;
-//   font-size: 40px;
-// `;
-
-// const FilterContainer = styled.div`
-//   width: 50%;
-//   margin: 30px;
-//   display: flex;
-//   justify-content: space-between;
-// `;
-// const Filter = styled.div`
-//   display: flex;
-//   align-items: center;
-// `;
-// const FilterTitle = styled.span`
-//   font-size: 20px;
-//   font-weight: 200;
-// `;
-// const FilterColor = styled.div`
-//   width: 20px;
-//   border-radius: 50%;
-//   background-color: ${(props) => props.color};
-//   margin: 0px 5px;
-// `;
-// const FilterSize = styled.select``;
-// const FilterSizeOption = styled.option``;
+const AddContainer = styled.div``;
+const AmountContainer = styled.div``;
+const Amount = styled.span``;
+const Button = styled.button``;
 
 const Product = () => {
   return (
@@ -157,8 +106,8 @@ const Product = () => {
 
             <p>
               <br />
-              Classic fit This product fits normally Take your usual size Model
-              height: 3m99 <br />
+              Classic fit This product fits normally <br />
+              Take your usual size Model height: 3m99 <br />
               The model presented is a size S
               <br />
               COMPOSITION AND CARE
@@ -185,6 +134,14 @@ const Product = () => {
               </FilterSize>
             </Filter>
           </FilterContainer>
+          <AddContainer>
+            <AmountContainer>
+              <Remove />
+              <Amount>1</Amount>
+              <Add />
+            </AmountContainer>
+            <Button>ADD TO CART</Button>
+          </AddContainer>
         </InfoContainer>
       </Wrapper>
       <Newsletter />
