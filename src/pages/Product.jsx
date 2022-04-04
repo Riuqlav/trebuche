@@ -37,9 +37,9 @@ const Desc = styled.p`
 `;
 
 const Price = styled.span`
-  font-weight: 100;
+  font-weight: 300;
   font-size: 40px;
-  padding-top: 20px;
+  margin: 20px;
 `;
 
 const FilterContainer = styled.div`
@@ -52,6 +52,7 @@ const FilterContainer = styled.div`
 const Filter = styled.div`
   display: flex;
   align-items: center;
+  margin: 20px;
 `;
 
 const FilterTitle = styled.span`
@@ -164,8 +165,8 @@ const Product = () => {
               <br />
               100% Cotton Machine washable at 40°
             </p>
-            <Price>20,00 € </Price>
           </Desc>
+          <Price>20,00 € </Price>
           <FilterContainer>
             <Filter>
               <FilterTitle>Color</FilterTitle>
