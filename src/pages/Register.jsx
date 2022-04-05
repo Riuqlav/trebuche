@@ -60,13 +60,13 @@ const Button = styled.button`
   margin: 10px 0px;
   background-color: #fff;
   color: #000;
-  font-weight: 200;
+  font-weight: 500;
   font-size: 16px;
   cursor: pointer;
   &:hover {
     /* pointer to the button easy in, avoids flashing once hovered */
     transition: ease-in 0.5s;
-    background-color: #f8f4f4;
+    background-color: teal;
   }
 `;
 
