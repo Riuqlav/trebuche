@@ -55,9 +55,6 @@ const Bottom = styled.div`
 const Info = styled.div`
   flex: 3;
 `;
-const Summary = styled.div`
-  flex: 1;
-`;
 const Product = styled.div`
   display: flex;
   justify-content: space-between;
@@ -114,7 +111,11 @@ const ProductPrice = styled.span`
 const Hr = styled.hr`
   background-color: lightgray;
 `;
-
+const Summary = styled.div`
+  flex: 1;
+`;
+const SummaryText = styled.span``;
+const Summaryitem = styled.span``;
 const Cart = () => {
   return (
     <Container>
@@ -188,7 +189,22 @@ const Cart = () => {
               </PriceDetail>
             </Product>
           </Info>
-          <Summary>Summary</Summary>
+          <Summary>
+            <SummaryTitle>
+              Order Summary <br />
+              <SummaryItem>
+                <SummaryItemText>
+                  <b>Subtotal:</b>
+                </SummaryItemText>
+                <SummaryItemText>
+                  <b>€49.99</b>
+                </SummaryItemText>
+                <SummaryItemText>
+                  <b>Shipping:</b>
+                </SummaryItemText>
+              </SummaryItem>
+            </SummaryTitle>
+          </Summary>
         </Bottom>
       </Wrapper>
       <Footer />
