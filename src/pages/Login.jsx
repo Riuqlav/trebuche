@@ -1,120 +1,94 @@
 import React from "react";
 import styled from "styled-components";
 
-const Container = styled.div``;
+const Container = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://images.pexels.com/photos/6984650/pexels-photo-6984650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+      center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
 const Wrapper = styled.div`
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-`;
-
-const ImgContainer = styled.div`
-  flex: 0.3;
-`;
-
-const Image = styled.img`
-  width: 50%;
-  height: 90vh;
-  object-fit: cover;
-`;
-
-const InfoContainer = styled.div`
-  flex: 1;
-  padding: 0px 50px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 `;
 
 const Title = styled.h1`
   font-weight: 200;
 `;
 
-const Desc = styled.p`
-  margin: 20px 0px;
-`;
-
-const Price = styled.span`
-  font-weight: 300;
-  font-size: 40px;
-  margin: 20px;
-`;
-
-const FilterContainer = styled.div`
-  width: 50%;
-  margin: 30px 0px;
+const Form = styled.form`
   display: flex;
-  justify-content: space-between;
-`;
-
-const Filter = styled.div`
-  display: flex;
+  flex-direction: column;
   align-items: center;
-  margin: 20px;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 0px auto;
 `;
 
-const FilterTitle = styled.span`
-  font-size: 20px;
-  font-weight: 200;
+const Input = styled.input`
+  width: 100%;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px 0px;
+  padding: 0px 10px;
 `;
 
-const FilterColor = styled.div`
-  width: 20px;
-  height: 20px;
-
+const Button = styled.button`
+  width: 100%;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px 0px;
+  background-color: #fff;
+  color: #000;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  &:hover {
+    /* pointer to the button easy in, avoids flashing once hovered */
+    transition: ease-in 0.5s;
+    background-color: teal;
+  }
 `;
+const Link = styled.a`
+  margin: 5px 0px;
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 300;
 
+  /* IT HAS TO BE BIGGER IN WEIGHT OTHERWISE THE PHOTO WILL COVER */
+`;
 
 const Login = () => {
-  return <Container>
+  return (
+    <Container>
       <Wrapper>
-        <ImgContainer>
-          <Image src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
-        </ImgContainer>
-        <InfoContainer>
-          <Title>
-            Product Title
-          </Title>
-          <Desc>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Donec euismod, nisl eget consectetur sagittis,
-            nisl nunc ultrices eros, eu porttitor nisl nunc euismod
-            nisl.
-          </Desc>
-          <Price>
-            $100
-          </Price>
-          <FilterContainer>
-            <Filter>
-              <FilterTitle>
-                Color
-              </FilterTitle>
-              <FilterColor style={{ backgroundColor: "red" }} />
-              <FilterColor style={{ backgroundColor: "blue" }} />
-              <FilterColor style={{ backgroundColor: "green" }} />
-            </Filter>
-            <Filter>
-              <FilterTitle>
-                Size
-              </FilterTitle>
-              <FilterTitle>
-                S
-              </FilterTitle>
-              <FilterTitle>
-                M
-              </FilterTitle>
-              <FilterTitle>
-                L
-              </FilterTitle>
-              <FilterTitle>
-                XL
-              </FilterTitle>
-            </Filter>
-          </FilterContainer>
-        </InfoContainer>
+        <Title>SIGN IN</Title>
+        <Form>
+          <Input placeholder="username" />
+          <Input placeholder="password" />
+          <Button>LOGIN</Button>
+          <Link> FORGOT YOUR PASSWORD?</Link>
+          <Link>CREATE A NEW ACCOUNT</Link>
+        </Form>
       </Wrapper>
-    </Container>;
-}
-      </Wrapper>
-  </Container>;
+    </Container>
+  );
 };
 
 export default Login;
