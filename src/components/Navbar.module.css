@@ -34,6 +34,10 @@
 
 .Logo {
   font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  text-decoration-color: none;
+  color: #000000;
 }
 
 .Center {

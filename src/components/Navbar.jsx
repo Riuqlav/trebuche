@@ -1,6 +1,6 @@
 import { Badge } from "@material-ui/core";
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
-import React from "react";
+import { Route, Routes, Link } from "react-router-dom";
 import classes from "./Navbar.module.css";
 
 const Navbar = (props) => {
@@ -15,7 +15,9 @@ const Navbar = (props) => {
           </div>
         </div>
         <div className={classes.Center}>
-          <h1 className={classes.Logo}>Trébuché.</h1>
+          <Link to="/" className={classes.Logo}>
+            <h1>Trébuché.</h1>{" "}
+          </Link>
         </div>
         <div className={classes.Right}>
           <div className={classes.MenuItem}>REGISTER</div>

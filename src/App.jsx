@@ -5,7 +5,9 @@ import Product from "./pages/Product";
 import ProductList from "./pages/ProductList";
 import Register from "./pages/Register";
 
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Link } from "react-router-dom";
+// Link needs to be imported from react-router-dom to
+//  render the client side without reloading the page
 
 const App = () => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import { categories } from "../data";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -34,6 +34,9 @@ const Button = styled.button`
   border: none;
   padding: 10px;
   background-color: white;
+  text-decoration: none;
+  text-decoration-color: none;
+  color: #000000;
   color: gray;
   cursor: pointer;
   font-weight: 600;
@@ -45,7 +48,9 @@ const CategoryItem = ({ item }) => {
       <Image src={item.img} />
       <Info>
         <Title>{item.title}</Title>
-        <Button>SHOP NOW</Button>
+        <Link to="/productList">
+          <Button>SHOP NOW</Button>{" "}
+        </Link>
       </Info>
     </Container>
   );
