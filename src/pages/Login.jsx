@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -26,6 +27,8 @@ const Wrapper = styled.div`
 
 const Title = styled.h1`
   font-weight: 200;
+  color: #000000;
+  text-decoration: none;
 `;
 
 const Form = styled.form`
@@ -64,7 +67,7 @@ const Button = styled.button`
     background-color: teal;
   }
 `;
-const Link = styled.a`
+const Links = styled.a`
   margin: 5px 0px;
   font-size: 12px;
   text-decoration: underline;
@@ -78,13 +81,19 @@ const Login = () => {
   return (
     <Container>
       <Wrapper>
-        <Title>SIGN IN</Title>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          {" "}
+          {/* this is in line to remove text decoration */}
+          <Title>SIGN IN</Title>
+        </Link>
         <Form>
           <Input placeholder="username" />
           <Input placeholder="password" />
+
           <Button>LOGIN</Button>
-          <Link> FORGOT YOUR PASSWORD?</Link>
-          <Link>CREATE A NEW ACCOUNT</Link>
+
+          <Links> FORGOT YOUR PASSWORD?</Links>
+          <Links>CREATE A NEW ACCOUNT</Links>
         </Form>
       </Wrapper>
     </Container>

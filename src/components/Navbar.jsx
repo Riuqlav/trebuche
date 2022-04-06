@@ -20,13 +20,21 @@ const Navbar = (props) => {
           </Link>
         </div>
         <div className={classes.Right}>
-          <div className={classes.MenuItem}>REGISTER</div>
-          <div className={classes.MenuItem}>SIGN IN</div>
+          <Link to="/register " className={classes.Logo}>
+            <div className={classes.MenuItem}>REGISTER</div>
+          </Link>
+
+          <Link to="/login" className={classes.Logo}>
+            <div className={classes.MenuItem}>SIGN IN</div>
+          </Link>
+
           <div className={classes.MenuItem}>
             {" "}
-            <Badge color="primary" badgeContent={10}>
-              <ShoppingCartOutlined />
-            </Badge>
+            <Link to="/cart" className={classes.Logo}>
+              <Badge color="primary" badgeContent={2}>
+                <ShoppingCartOutlined />
+              </Badge>
+            </Link>
           </div>
         </div>
       </div>

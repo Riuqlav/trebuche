@@ -8,6 +8,7 @@ import {
   Twitter,
 } from "@material-ui/icons";
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -47,7 +48,11 @@ const Right = styled.div`
   padding: 20px;
 `;
 
-const Logo = styled.h1``;
+const Logo = styled.h1`
+  text-decoration: none;
+  text-decoration-color: none;
+  color: #000000;
+`;
 
 const Desc = styled.p`
   margin: 20px 0px;
@@ -84,9 +89,12 @@ const Footer = () => {
   return (
     <Container>
       <Left>
-        <Logo>
-          <h2>Trébuché.</h2>{" "}
-        </Logo>
+        <Link
+          style={{ textDecoration: "none", textDecorationLine: "none" }}
+          to="/"
+        >
+          <Logo>Trébuché.</Logo>{" "}
+        </Link>
         <Desc>
           {" "}
           This is a Dummy description for my first store website, since loren is
@@ -94,16 +102,16 @@ const Footer = () => {
         </Desc>
         <SocialContainer>
           <SocialIcon color="3B5999">
-            <Facebook />
+            <Facebook a href="https://youtu.be/dQw4w9WgXcQ" />
           </SocialIcon>
           <SocialIcon color="E4405F">
-            <Instagram />
+            <Instagram a href="https://youtu.be/dQw4w9WgXcQ" />
           </SocialIcon>
           <SocialIcon color="55ACEE">
-            <Twitter />
+            <Twitter a href="https://youtu.be/dQw4w9WgXcQ" />
           </SocialIcon>
           <SocialIcon color="E60023">
-            <Pinterest />
+            <Pinterest a href="https://youtu.be/dQw4w9WgXcQ" />
           </SocialIcon>
         </SocialContainer>
       </Left>
