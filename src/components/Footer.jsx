@@ -102,16 +102,16 @@ const Footer = () => {
         </Desc>
         <SocialContainer>
           <SocialIcon color="3B5999">
-            <Facebook a href="https://youtu.be/dQw4w9WgXcQ" />
+            <Facebook />
           </SocialIcon>
           <SocialIcon color="E4405F">
-            <Instagram a href="https://youtu.be/dQw4w9WgXcQ" />
+            <Instagram a />
           </SocialIcon>
           <SocialIcon color="55ACEE">
-            <Twitter a href="https://youtu.be/dQw4w9WgXcQ" />
+            <Twitter />
           </SocialIcon>
           <SocialIcon color="E60023">
-            <Pinterest a href="https://youtu.be/dQw4w9WgXcQ" />
+            <Pinterest />
           </SocialIcon>
         </SocialContainer>
       </Left>
