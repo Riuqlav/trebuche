@@ -6,7 +6,9 @@ import styled from "styled-components";
 import { Add, Remove } from "@material-ui/icons";
 
 const Container = styled.div``;
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  padding-bottom: 100px;
+`;
 
 const Title = styled.h1`
   font-weight: 300;
@@ -113,9 +115,33 @@ const Hr = styled.hr`
 `;
 const Summary = styled.div`
   flex: 1;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: 20px;
+  height: 50vh;
 `;
-const SummaryText = styled.span``;
-const Summaryitem = styled.span``;
+const SummaryTitle = styled.h1`
+  font-weight: 200;
+`;
+
+const SummaryItem = styled.div`
+  margin: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: ${(props) => (props.type === "total" ? "600" : "300")};
+  font-size: ${(props) => props.type === "total" && "24px"};
+`;
+
+const SummaryItemText = styled.span``;
+const SummaryItemPrice = styled.span``;
+const Button = styled.button`
+  width: 100%;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+`;
+
 const Cart = () => {
   return (
     <Container>
@@ -159,7 +185,7 @@ const Cart = () => {
                   <ProductAmount>1</ProductAmount>
                   <Remove />
                 </ProductAmountBox>{" "}
-                <ProductPrice> €49.99 </ProductPrice>{" "}
+                <ProductPrice> € 49,99 </ProductPrice>{" "}
               </PriceDetail>
             </Product>
             <Hr />
@@ -185,25 +211,30 @@ const Cart = () => {
                   <ProductAmount>1</ProductAmount>
                   <Remove />
                 </ProductAmountBox>
-                <ProductPrice>$ 20</ProductPrice>
+                <ProductPrice>€ 20,00</ProductPrice>
               </PriceDetail>
             </Product>
           </Info>
+
           <Summary>
-            <SummaryTitle>
-              Order Summary <br />
-              <SummaryItem>
-                <SummaryItemText>
-                  <b>Subtotal:</b>
-                </SummaryItemText>
-                <SummaryItemText>
-                  <b>€49.99</b>
-                </SummaryItemText>
-                <SummaryItemText>
-                  <b>Shipping:</b>
-                </SummaryItemText>
-              </SummaryItem>
-            </SummaryTitle>
+            <SummaryTitle>ORDER SUMMARY</SummaryTitle>
+            <SummaryItem>
+              <SummaryItemText>Subtotal</SummaryItemText>
+              <SummaryItemPrice>€ 69,99</SummaryItemPrice>
+            </SummaryItem>
+            <SummaryItem>
+              <SummaryItemText>Estimated Shipping</SummaryItemText>
+              <SummaryItemPrice>€ 5,90</SummaryItemPrice>
+            </SummaryItem>
+            <SummaryItem>
+              <SummaryItemText>Shipping Discount</SummaryItemText>
+              <SummaryItemPrice>€ -5,90</SummaryItemPrice>
+            </SummaryItem>
+            <SummaryItem type="total">
+              <SummaryItemText>Total</SummaryItemText>
+              <SummaryItemPrice>€ 69,99</SummaryItemPrice>
+            </SummaryItem>
+            <Button>CHECKOUT NOW</Button>
           </Summary>
         </Bottom>
       </Wrapper>
