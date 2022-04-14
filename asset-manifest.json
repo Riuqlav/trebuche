@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/trebuche/static/css/main.1027f0fb.chunk.css",
+    "main.js": "/trebuche/static/js/main.d482404d.chunk.js",
+    "main.js.map": "/trebuche/static/js/main.d482404d.chunk.js.map",
+    "runtime-main.js": "/trebuche/static/js/runtime-main.761d2c2b.js",
+    "runtime-main.js.map": "/trebuche/static/js/runtime-main.761d2c2b.js.map",
+    "static/js/2.7f2b8acd.chunk.js": "/trebuche/static/js/2.7f2b8acd.chunk.js",
+    "static/js/2.7f2b8acd.chunk.js.map": "/trebuche/static/js/2.7f2b8acd.chunk.js.map",
+    "index.html": "/trebuche/index.html",
+    "static/css/main.1027f0fb.chunk.css.map": "/trebuche/static/css/main.1027f0fb.chunk.css.map",
+    "static/js/2.7f2b8acd.chunk.js.LICENSE.txt": "/trebuche/static/js/2.7f2b8acd.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.761d2c2b.js",
+    "static/js/2.7f2b8acd.chunk.js",
+    "static/css/main.1027f0fb.chunk.css",
+    "static/js/main.d482404d.chunk.js"
+  ]
+}
