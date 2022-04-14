@@ -1,6 +1,6 @@
 import { Badge } from "@material-ui/core";
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
-import { Route, Routes, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import classes from "./Navbar.module.css";
 
 const Navbar = (props) => {
