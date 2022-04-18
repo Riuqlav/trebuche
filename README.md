@@ -2,6 +2,8 @@
 
 This project focuses on the front end and it uses dummy data.
 
+DEMO: https://riuqlav.github.io/trebuche/
+
 ## Tools and technologies used
 
 React, JS, Styled components
