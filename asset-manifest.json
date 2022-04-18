@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/trebuche/static/css/main.1027f0fb.chunk.css",
-    "main.js": "/trebuche/static/js/main.ed71d8e6.chunk.js",
-    "main.js.map": "/trebuche/static/js/main.ed71d8e6.chunk.js.map",
+    "main.js": "/trebuche/static/js/main.127176c2.chunk.js",
+    "main.js.map": "/trebuche/static/js/main.127176c2.chunk.js.map",
     "runtime-main.js": "/trebuche/static/js/runtime-main.761d2c2b.js",
     "runtime-main.js.map": "/trebuche/static/js/runtime-main.761d2c2b.js.map",
     "static/js/2.7f2b8acd.chunk.js": "/trebuche/static/js/2.7f2b8acd.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.761d2c2b.js",
     "static/js/2.7f2b8acd.chunk.js",
     "static/css/main.1027f0fb.chunk.css",
-    "static/js/main.ed71d8e6.chunk.js"
+    "static/js/main.127176c2.chunk.js"
   ]
 }
